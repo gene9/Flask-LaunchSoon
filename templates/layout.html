@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+{% block head %}
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//ajax.aspnetcdn.com">
+
+    <script type='text/javascript'>
+        window.mod_pagespeed_prefetch_start = Number(new Date());
+        window.mod_pagespeed_num_resources_prefetched = 3;
+    </script>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" media="screen" href="{{ url_for('static', filename='css/metro-bootstrap.min.css') }}" >
+    <link rel="stylesheet" media="screen" href="{{ url_for('static', filename='css/metro-bootstrap-responsive.min.css') }}" >
+    <link rel="stylesheet" media="screen" href="{{ url_for('static', filename='css/iconFont.min.css') }}" >
+    <link rel="stylesheet" media="screen" href="{{ url_for('static', filename='css/custom.css') }}" >
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+{% endblock %}
+</head>
+
+<body class="metro">
+
+    <div class="container">
+        <header class="margin20 nrm nlm">
+            <div class="clearfix">
+                <a class="place-left" title="Survey Zero" href="#">
+                    <h1>Super Puper</h1>
+                </a>
+            </div>
+            <div class="clearfix">
+                <h3>Super Puper helps you to destroy the sun!</h3>
+            <div>
+        </header>
+
+        <div class="main-content clearfix">
+            <div class="tile-area no-padding clearfix">
+                <div class="tile-group no-margin no-padding clearfix" style="width: 100%">
+
+                    <div class="tile quadro double-vertical ol-transparent bg-white">
+                        <div class="tile-content">
+                            <div class="panel no-border">
+                                <div class="panel-header bg-darkCobalt fg-white">Subscribe for news</div>
+                                <div class="panel-content fg-dark nlp nrp">
+                                    {% block content %}
+                                    {% endblock %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tile double double-vertical ol-transparent bg-darkMagenta"></div>
+                    <div class="tile ol-transparent bg-darkGreen"></div>
+                    <div class="tile ol-transparent bg-lightOrange"></div>
+                    <div class="tile ol-transparent bg-lime"></div>
+                    <div class="tile ol-transparent bg-mauve"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="bottom-menu-wrapper">
+                <ul class="horizontal-menu compact">
+                    <li>&copy; 2014 Super Puper</li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
+
