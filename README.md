@@ -6,6 +6,5 @@ Flask-LaunchSoon
 Current state
 =============
 
-* **Main**
   ![Main](http://i.imgur.com/DnVGxA4.png)
 
