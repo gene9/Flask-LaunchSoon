@@ -7,5 +7,5 @@ Current state
 =============
 
 * **Main**
-  ![Main](http:///i.imgur.com/DnVGxA4.png)
+  ![Main](http://i.imgur.com/DnVGxA4.png)
 
