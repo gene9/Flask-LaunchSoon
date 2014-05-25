@@ -1,7 +1,7 @@
 Flask-LaunchSoon
 ================
 
-"Launching soon" we site template for Flask.
+"Launching soon" web site template for Flask.
 
 Current state
 =============
