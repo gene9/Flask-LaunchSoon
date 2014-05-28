@@ -34,17 +34,17 @@ class Contact(db.Model):
 
 @app.route('/', methods=["GET", "POST"])
 def index():
-    form = SignupForm()
+    form = SignupForm(request.form)
 
-    if request.method == "GET":
+    if request.method == "POST" and form.validate_on_submit():
+        contact = Contact()
+        contact.email = form.email.data
+
+        db.session.add(contact)
+        db.session.commit()
+
+        return render_template("subscribed.html")
+    else:
         return render_template("index.html", form=form)
-
-    contact = Contact()
-    contact.email = form.email.data
-
-    db.session.add(contact)
-    db.session.commit()
-
-    return render_template("index.html", form=form)
-
+        
 # ---

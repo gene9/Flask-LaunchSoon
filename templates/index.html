@@ -15,7 +15,7 @@
         </p>
 
         {% for message in form.email.errors %}
-            <div class="alert">{{ message }}</div>
+            <p class="text-alert">{{ message }}</p>
         {% endfor %}
 
         <div class="input-control text size3" data-role="input-control">
