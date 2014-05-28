@@ -1,4 +1,4 @@
 
 all:
-	pep8 manage.py launchsoon,py
+	pep8 manage.py launchsoon.py
 

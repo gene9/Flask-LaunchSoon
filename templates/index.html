@@ -1,16 +1,28 @@
 {% extends "layout.html" %}
+
+{% block title %}
+    Super Puper
+{% endblock %}
+
 {% block content %}
 
-    <form class="clearfix" style="vertical-align: bottom;">
+    <form class="clearfix" style="vertical-align: bottom;" action="{{ url_for('index') }}" method="POST">
+        {{ form.hidden_tag() }}
+
         <p>
             We are launching soon! <br/>
             Signup to get notified when we launch.
         </p>
+
+        {% for message in form.email.errors %}
+            <div class="alert">{{ message }}</div>
+        {% endfor %}
+
         <div class="input-control text size3" data-role="input-control">
-            <input type="text" placeholder="your@email.com">
+            {{ form.email(placeholder="your@email.com", maxlength="256") }}
         </div>
         <div class="input-control text size2" data-role="input-control">
-            <input type="submit" value="Subscribe">
+            <input type="submit" id="subscribe" value="Subscribe">
         </div>
     </form>
 

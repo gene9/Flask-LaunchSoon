@@ -15,7 +15,6 @@
 
     <meta charset="utf-8">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" media="screen" href="{{ url_for('static', filename='css/metro-bootstrap.min.css') }}" >
@@ -39,7 +38,7 @@
             </div>
             <div class="clearfix">
                 <h3>Super Puper helps you to destroy the sun!</h3>
-            <div>
+            </div>
         </header>
 
         <div class="main-content clearfix">
@@ -76,6 +75,24 @@
         </footer>
 
     </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var $button = $("input#subscribe");
+
+            $("input#email")
+                .keyup(function () {
+                    var rc = $(this).val().length <= 0;
+                    $button.prop("disabled", rc);
+                })
+                .focus();
+
+            $button
+                .prop("disabled", true);
+        });
+    </script>
+
 </body>
 </html>
 
